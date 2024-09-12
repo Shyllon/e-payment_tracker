@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Electricity Payment Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Electricity Payment Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#payments">Payment Log</a></li>
+                <li><a href="#add-payment">Add Payment</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <li><a href="#building-updates">Building Updates</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section>
+            <h2>Welcome to the Electricity Payment Tracker</h2>
+            <p>This app helps to track electricity payments and ensure transparency among residents.</p>
+        </section>
+    </main>
+
+    <section id="payments">
+        <h2>Payment Log</h2>
+        <table id="payment-log">
+            <thead>
+                <tr>
+                    <th>Resident Name</th>
+                    <th>Amount Paid</th>
+                    <th>Payment For</th>
+                    <th>Date Paid</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Payment data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="add-payment">
+        <h2>Add a Payment</h2>
+        <form id="payment-form">
+            <label for="name">Resident Name:</label>
+            <input type="text" id="name" required>
+    
+            <label for="amount">Amount Paid:</label>
+            <input type="number" id="amount" required>
+    
+            <label for="month">Month:</label>
+            <select id="month" required>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+    
+            <label for="year">Year:</label>
+            <select id="year" required>
+                <!-- You can generate this dynamically, but we'll list recent years here -->
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+            </select>
+    
+            <button type="submit">Submit Payment</button>
+        </form>
+    </section>
+    
+    <section>
+        <h2>Register New Resident</h2>
+        <form id="resident-form">
+            <label for="resident-name">Name:</label>
+            <input type="text" id="resident-name" required>
+    
+            <label for="apartment-number">Apartment Number:</label>
+            <input type="text" id="apartment-number" required>
+    
+            <button type="submit">Add Resident</button>
+        </form>
+    </section>
+    
+    <section>
+        <h2>Resident List</h2>
+        <table id="resident-list">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Apartment Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Resident entries will be added here -->
+            </tbody>
+        </table>
+    </section>
+    
+    <section id="notifications">
+        <h2>Notifications</h2>
+        <div id="payment-alert"></div>
+    </section>
+    
+    <section id="updates">
+        <h2>Building Updates</h2>
+        <p id="latest-update">No updates at the moment.</p>
+    
+        <form id="update-form">
+            <label for="update">Post an Update:</label>
+            <textarea id="update" required></textarea>
+            <button type="submit">Post Update</button>
+        </form>
+    </section>
+
+    <section id="login-section">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+    
+            <button type="submit">Login</button>
+        </form>
+        <p id="login-error" style="color: red; display: none;">Invalid login credentials!</p>
+    </section>
+    
+    <section id="admin-content" style="display: none;">
+        <h2>Welcome Admin!</h2>
+        <!-- Admin-specific content like update posts and resident management -->
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2024 Building Electricity Payment Tracker</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
