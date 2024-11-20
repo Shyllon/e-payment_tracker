@@ -50,6 +50,10 @@ footer {
     width: 100%;
 }
 
+footer:hover {
+    transform: scale(1.2);
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -76,6 +80,11 @@ button {
     cursor: pointer;
     margin-top: 20px;
 }
+
+button:hover {
+    transform: scale(1.2);
+}
+
 
 button:hover {
     background-color: #45a049;
